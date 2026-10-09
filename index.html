@@ -8,7 +8,6 @@
 <body>
 <div class="stars" aria-hidden="true"></div>
 <main>
-<header><a class="wordmark" href="#">PARA MAFER <span>✧</span></a><span class="edition">EDICIÓN DE CUMPLEAÑOS · 01</span></header>
 <section class="celebration">
 <div class="eyebrow"><span></span> ESTA NOCHE ES TUYA <span></span></div>
 <h1>Feliz cumpleaños,<br><em>Mafer.</em></h1>
@@ -23,13 +22,19 @@
 <p class="hint">Un pequeño regalo. Ábrelo cuando quieras.</p>
 </div>
 <div id="birthday-surprise" hidden>
+<!-- Añade tu archivo en assets/music.mp3 y cambia data-src por src para activar la música. -->
+<audio id="birthday-music" data-src="assets/music.mp3" preload="none" loop></audio>
+<button id="music-toggle" type="button" hidden aria-label="Pausar música">Pausar música ♫</button>
 <article class="letter" aria-labelledby="letter-title">
 <span class="letter-ornament" aria-hidden="true">✧ ── ☾ ── ✧</span>
 <p class="small-label">UNA CARTA PARA TI</p>
-<h2 id="letter-title" tabindex="-1">Querida Mafer,</h2>
-<!-- Sustituye este párrafo por tu frase o carta cuando esté lista. -->
-<p class="letter-message">Aquí irá una pequeña carta escrita para ti.</p>
-<p class="letter-signature">Con cariño <span aria-hidden="true">♡</span></p>
+<h2 id="letter-title" tabindex="-1">Querida Mafi:</h2>
+<div class="letter-message">
+<p>Pese a que estoy un poquito lejos y esta es la única manera en que puedo compartirte este mini regalo, quiero desearte un súper mega recontra increíble cumpleaños.</p>
+<p>Agradezco un montón tu presencia en mi vida y tu compañía día a día; unos días más, otros menos. Tu presencia hace la diferencia, y sé que también es así para tus demás amigos y familiares. Eres tan presente como brillante, un gran apoyo y una gran persona. Gracias por estar y acompañarme.</p>
+<p>Hoy, en tu gran día, deseo que lo disfrutes un montón, que la pases increíble con tus amigos y familia y que cumplas ocho mil años más. Y no olvides pedir tu deseo.</p>
+</div>
+<p class="letter-signature">Con cariño, para la mejor vampira.<br> TQM <span aria-hidden="true">♡</span></p>
 </article>
 <div class="illustration" role="img" aria-label="Un pequeño murciélago vuela sobre un pastel violeta con tres velas">
 <div class="halo"></div>
@@ -53,11 +58,11 @@
 <p id="wish-status" class="hint" aria-live="polite">Y cuando estés lista, sopla las velitas.</p>
 </div>
 </section>
-<section class="keepsakes" aria-label="Pequeños detalles para ti">
+<section hidden id="keepsakes" class="keepsakes" aria-label="Pequeños detalles para ti">
 <div class="note"><span class="small-label">UNA NOTITA</span><p>Que este año te encuentre<br>rodeada de personas que<br><em>te quieran tal como eres.</em></p><span class="note-star" aria-hidden="true">✧</span></div>
 <div class="ticket"><div class="ticket-top"><span>YOUR BIRTHDAY MIX</span><span>♫</span></div><strong>HOT<br>FREAKS</strong><div class="ticket-bottom"><span>EN REPEAT, SIEMPRE</span><span>VOL. 01</span></div><div class="ticket-perf" aria-hidden="true"></div></div>
 </section>
-<footer>Hecho para celebrar el pequeño universo de Mafer. <span>☾</span></footer>
+
 </main>
 <script src="script.js"></script>
 </body>
