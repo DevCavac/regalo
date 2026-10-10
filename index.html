@@ -22,9 +22,6 @@
 <p class="hint">Un pequeño regalo. Ábrelo cuando quieras.</p>
 </div>
 <div id="birthday-surprise" hidden>
-<!-- Añade tu archivo en assets/music.mp3 y cambia data-src por src para activar la música. -->
-<audio id="birthday-music" data-src="assets/music.mp3" preload="none" loop></audio>
-<button id="music-toggle" type="button" hidden aria-label="Pausar música">Pausar música ♫</button>
 <article class="letter" aria-labelledby="letter-title">
 <span class="letter-ornament" aria-hidden="true">✧ ── ☾ ── ✧</span>
 <p class="small-label">UNA CARTA PARA TI</p>
@@ -57,6 +54,11 @@
 <button id="wish" type="button">Pide un deseo <span aria-hidden="true">↗</span></button>
 <p id="wish-status" class="hint" aria-live="polite">Y cuando estés lista, sopla las velitas.</p>
 </div>
+</section>
+<section id="music-card" class="music-card" hidden aria-label="Música para acompañar tu regalo">
+<p class="small-label">UNA CANCIÓN PARA ESTE MOMENTO ♫</p>
+<iframe id="birthday-music" title="Bad Boy — reproductor de YouTube" width="560" height="315" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p class="hint">Si no empieza sola, dale play. <a href="https://www.youtube.com/watch?v=cN24NJZlWEU" target="_blank" rel="noopener noreferrer">Escuchar en YouTube ↗</a></p>
 </section>
 <section hidden id="keepsakes" class="keepsakes" aria-label="Pequeños detalles para ti">
 <div class="note"><span class="small-label">UNA NOTITA</span><p>Que este año te encuentre<br>rodeada de personas que<br><em>te quieran tal como eres.</em></p><span class="note-star" aria-hidden="true">✧</span></div>

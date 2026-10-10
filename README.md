@@ -28,4 +28,4 @@ Comparte la dirección de la página publicada. La dirección del repositorio mu
 
 ## Música
 
-Coloca el archivo de audio elegido en `assets/music.mp3` (con permiso para usarlo). En `index.html`, cambia `data-src="assets/music.mp3"` por `src="assets/music.mp3"`. La música empezará con el clic que abre el regalo y tendrá un botón para pausarla. Hasta añadirla no hay sonido ni se solicita un archivo inexistente.
+Al abrir el regalo se carga el video de YouTube elegido (`cN24NJZlWEU`) mediante su reproductor oficial y se solicita reproducción automática. No se descarga ni se incluye un MP3. El reproductor permite pausar, ajustar el volumen y desplazarse en la canción. Si el navegador impide el inicio automático, se puede pulsar Play. También hay un enlace al video si su propietario restringe la reproducción insertada. Necesita conexión a YouTube. La carta funciona aunque el video no cargue.

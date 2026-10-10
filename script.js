@@ -1,7 +1,7 @@
 const openGift = document.querySelector('#open-gift');
 const surprise = document.querySelector('#birthday-surprise');
 const music = document.querySelector('#birthday-music');
-const musicToggle = document.querySelector('#music-toggle');
+const musicCard = document.querySelector('#music-card');
 const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 let opening = false;
 function revealGift() {
@@ -39,24 +39,13 @@ openGift.addEventListener('click', () => {
   opening = true;
   openGift.setAttribute('aria-expanded', 'true');
   openGift.disabled = true;
-  if (music.getAttribute('src')) {
-    musicToggle.hidden = false;
-    music.play().then(() => setMusicLabel()).catch(() => setMusicLabel());
-  }
+  musicCard.hidden = false;
+  music.src = 'https://www.youtube-nocookie.com/embed/cN24NJZlWEU?autoplay=1&playsinline=1&rel=0';
   if (reducedMotion()) { revealGift(); return; }
   document.querySelector('#gift-scene').classList.add('opening');
   releaseBats(document.querySelector('.gift-box').getBoundingClientRect());
   setTimeout(revealGift, 1400);
 });
-function setMusicLabel() {
-  musicToggle.textContent = music.paused ? 'Reproducir música ♫' : 'Pausar música ♫';
-  musicToggle.setAttribute('aria-label', music.paused ? 'Reproducir música' : 'Pausar música');
-}
-musicToggle.addEventListener('click', () => {
-  if (music.paused) music.play().then(setMusicLabel).catch(setMusicLabel);
-  else { music.pause(); setMusicLabel(); }
-});
-
 const button = document.querySelector('#wish');
 const status = document.querySelector('#wish-status');
 let wished = false;
